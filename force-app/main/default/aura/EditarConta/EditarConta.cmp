@@ -1,0 +1,11 @@
+<aura:component implements="flexipage:availableForAllPageTypes">
+    <lightning:card footer="Card Footer" title="Detalhes Rápidos">
+        <aura:set attribute="actions">
+            <lightning:button label="New"/>
+        </aura:set>
+        <div class="container"> 
+            Hello world!
+            <!-- Other components -->
+        </div>
+    </lightning:card>
+</aura:component>
