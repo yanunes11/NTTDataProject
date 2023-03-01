@@ -1,11 +1,14 @@
-<aura:component implements="flexipage:availableForAllPageTypes">
-    <lightning:card footer="Card Footer" title="Detalhes Rápidos">
-        <aura:set attribute="actions">
-            <lightning:button label="New"/>
-        </aura:set>
+<aura:component implements="flexipage:availableForAllPageTypes,force:hasRecordId">
+
+    <aura:attribute name="recordId" type="String" />
+    <aura:attribute name="fields" type="String[]" default="['Name','AccountNumber','Type']" />
+
+                          
+    <lightning:card title="Detalhes Rápidos">
         <div class="container"> 
-            Hello world!
-            <!-- Other components -->
+            <lightning:recordForm recordId="{!v.recordId}" 
+            objectApiName="Account"
+            fields="{!v.fields}" />
         </div>
     </lightning:card>
 </aura:component>
